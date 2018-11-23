@@ -14,7 +14,6 @@ public class Generator {
 	
 	public void generateDanceGroups(DSP dsp, Reader reader) {
 		ArrayList<ArrayList<String>> groups = reader.readFile();
-		
 
 		for(ArrayList<String> readGroup : groups) {
 			DanceGroup group = new DanceGroup(readGroup.get(0));
@@ -25,8 +24,6 @@ public class Generator {
 			}
 			dsp.addGroup(group);
 		}
-		
-		System.out.println(groups.toString());
 	}
 	
 }

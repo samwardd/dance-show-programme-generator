@@ -1,6 +1,6 @@
 package model;
 
-public class Pupil {
+public class Pupil implements Comparable<Pupil> {
 	private String forename;
 	
 	public Pupil(String forename) {
@@ -9,5 +9,9 @@ public class Pupil {
 	
 	public String getForename() {
 		return forename;
+	}
+	
+	public int compareTo(Pupil pupil) {
+		return this.getForename().compareTo(pupil.getForename());
 	}
 }

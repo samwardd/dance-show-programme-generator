@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -9,7 +10,7 @@ public class DanceGroup{
 	
 	public DanceGroup(String name) {
 		this.groupName = name;
-		pupilsInGroup = new TreeSet<>();		
+		pupilsInGroup = new TreeSet<Pupil>(Comparator.comparing(Pupil::getForename));		
 	}
 	
 	public String getName() {

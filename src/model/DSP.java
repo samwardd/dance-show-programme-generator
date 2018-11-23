@@ -33,7 +33,7 @@ public class DSP {
 	
 	public DanceGroup getGroup(String groupName) throws DanceGroupNotFoundException {
 		if(!listOfGroups.containsKey(groupName)) {
-			throw new DanceGroupNotFoundException("No dance has that name.");
+			throw new DanceGroupNotFoundException("No dance group has that name.");
 		}
 		return listOfGroups.get(groupName);
 	}
