@@ -22,30 +22,29 @@ public class Reader {
 	}
 	
 	public ArrayList<ArrayList<String>> readFile(){
-		ArrayList<ArrayList<String>> danceGroups = new ArrayList<ArrayList<String>>();
+		ArrayList<ArrayList<String>> listOfLines = new ArrayList<ArrayList<String>>();
 		String line = null;
 		
 		try {
-			bReader.readLine(); // Discard first line, column titles - not stored anywhere
+			bReader.readLine(); // Discard first line, only column headings and not stored anywhere
 			
 			while((line = bReader.readLine()) != null) {
 				
-				String[] dancersList = line.split(","); // Splits string into array
-				dancersList[0] = dancersList[0].replace("\"", ""); // Removes quotes from around first term
-				String[] splitFirst = dancersList[0].split("\\t");	// Splits first term in to line name and first line item
+				String[] columns = line.split("\\t"); // Split read line into columns
+				String title = columns[0]; // Retrieve title of line from first column
+				String[] data = columns[1].split(",");	// Split second column into array of data items
 				
-				ArrayList<String> newGroup = new ArrayList<>();
+				ArrayList<String> newLine = new ArrayList<>(); // Store each line in list
 				
-				newGroup.add(splitFirst[0]); // Line name first item in ArrayList
-				newGroup.add(splitFirst[1]); // Add first term
+				newLine.add(title); // Title is the first item added to the list
 				
-				for(int i = 1; i < dancersList.length; i++) {
-					newGroup.add(dancersList[i]); // Add rest of terms
+				for(int i = 0; i < data.length; i++) {
+					newLine.add(data[i]); // Add each item of data to the list
 				}
-				danceGroups.add(newGroup); // Add read line stored in ArrayList into ArrayList
+				listOfLines.add(newLine); // Add the read line stored in ArrayList into ArrayList
 			}
 			bReader.close();
-			return danceGroups;
+			return listOfLines;
 		} catch (IOException e) {
 			System.out.println(e.toString());
 			return null;
