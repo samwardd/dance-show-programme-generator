@@ -27,6 +27,10 @@ public class DSP {
 		return listOfDances.get(danceName);
 	}
 	
+	public Map<String, Dance> getDances(){
+		return listOfDances;
+	}
+	
 	public void addGroup(DanceGroup group) {		
 		listOfGroups.put(group.getName(), group);
 	}

@@ -1,27 +1,30 @@
 package model;
 
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DanceGroup{
+	
 	private String groupName;
-	private Set<Pupil> pupilsInGroup;
+	private List<Performer> pupilsInGroup;
 	
 	public DanceGroup(String name) {
 		this.groupName = name;
-		pupilsInGroup = new TreeSet<Pupil>(Comparator.comparing(Pupil::getForename));		
+		pupilsInGroup = new ArrayList<Performer>();		
 	}
 	
 	public String getName() {
 		return this.groupName;
 	}
 		
-	public boolean addPupil(Pupil pupil) {
-		return this.pupilsInGroup.add(pupil);		
+	public boolean addPupil(Performer pupil) {
+		if (pupil.getPerformerType().equals(PerformerType.PUPIL)) {
+			return pupilsInGroup.add(pupil);
+		}
+		return false;		
 	}
 	
-	public Set<Pupil> getPupilsInGroup() {
+	public List<Performer> getPupilsInGroup() {
 		return this.pupilsInGroup;
 	}
 

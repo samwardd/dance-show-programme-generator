@@ -1,28 +1,57 @@
 package io;
 
 import model.DSP;
+import model.Dance;
 import model.DanceGroup;
-import model.Pupil;
+import model.Performer;
+import model.PerformerType;
 
 import java.util.ArrayList;
 
+import exceptions.DanceGroupNotFoundException;
+
 public class Generator {
 	
-	public Generator(DSP dsp, Reader reader) {
-		generateDanceGroups(dsp, reader);
+	public Generator() {
 	}
 	
 	public void generateDanceGroups(DSP dsp, Reader reader) {
-		ArrayList<ArrayList<String>> groups = reader.readFile();
+		ArrayList<ArrayList<String>> groupsList = reader.readFile();
 
-		for(ArrayList<String> readGroup : groups) {
+		for(ArrayList<String> readGroup : groupsList) {
 			DanceGroup group = new DanceGroup(readGroup.get(0));
 			
-			for (int i = 1; i < readGroup.size(); i++) {
-				Pupil pupil = new Pupil(readGroup.get(i));
+			for (int i = 1; i < readGroup.size(); i++) {							
+				Performer pupil = new Performer(readGroup.get(i), PerformerType.PUPIL);
 				group.addPupil(pupil);
 			}
 			dsp.addGroup(group);
+		}
+	}
+	
+	public void generateDances(DSP dsp, Reader reader) {
+		ArrayList<ArrayList<String>> dancesList = reader.readFile();
+
+		for(ArrayList<String> readDance : dancesList) {
+			Dance dance = new Dance(readDance.get(0));
+			
+			for (int i = 1; i < readDance.size(); i++) {
+				DanceGroup searchGroup;
+				
+				try {
+					searchGroup = dsp.getGroup(readDance.get(i));
+				} catch (DanceGroupNotFoundException e) {
+					searchGroup = null;
+				}
+				
+				if (searchGroup != null) {
+					dance.addDanceGroup(searchGroup);
+				} else {
+					Performer guest = new Performer(readDance.get(i), PerformerType.GUEST);
+					dance.addGuestPerformer(guest);
+				}
+			}
+			dsp.addDance(dance);
 		}
 	}
 	

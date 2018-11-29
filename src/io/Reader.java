@@ -31,14 +31,16 @@ public class Reader {
 			while((line = bReader.readLine()) != null) {
 				
 				String[] columns = line.split("\\t"); // Split read line into columns
-				String title = columns[0]; // Retrieve title of line from first column
-				String[] data = columns[1].split(",");	// Split second column into array of data items
+
+				String title = columns[0].trim(); // Retrieve title of line from first column, removing whitespace from either side		
+				String[] data = columns[1].split(",");	// Split second column into array of data items, split by comma
 				
-				ArrayList<String> newLine = new ArrayList<>(); // Store each line in list
+				ArrayList<String> newLine = new ArrayList<>(); // Store each line in list				
 				
-				newLine.add(title); // Title is the first item added to the list
-				
+				newLine.add(title); // Title is the first item added to the list				
+							
 				for(int i = 0; i < data.length; i++) {
+					data[i] = data[i].trim(); // Remove any whitespace from either side of data item	
 					newLine.add(data[i]); // Add each item of data to the list
 				}
 				listOfLines.add(newLine); // Add the read line stored in ArrayList into ArrayList
