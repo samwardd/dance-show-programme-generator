@@ -2,6 +2,7 @@ package model;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import exceptions.DanceGroupNotFoundException;
 import exceptions.DanceNotFoundException;
@@ -12,7 +13,7 @@ public class DSP {
 	public Map<String, DanceGroup> listOfGroups;
 	
 	public DSP() {
-		this.listOfDances = new HashMap<>();
+		this.listOfDances = new TreeMap<>();
 		this.listOfGroups = new HashMap<>();
 	}
 	

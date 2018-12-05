@@ -11,14 +11,9 @@ public class Reader {
 	private File file;
 	private BufferedReader bReader;
 	
-	public Reader(String filename) {
+	public Reader(String filename) throws FileNotFoundException {
 		file = new File(filename);
-		
-		try {
-			bReader = new BufferedReader(new FileReader(file));
-		} catch (FileNotFoundException e) {
-			System.out.println(e.toString());
-		}
+		bReader = new BufferedReader(new FileReader(file));
 	}
 	
 	public ArrayList<ArrayList<String>> readFile(){

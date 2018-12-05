@@ -1,5 +1,7 @@
 package core;
 
+import java.io.FileNotFoundException;
+
 import controller.TUIController;
 import io.Generator;
 import io.Reader;
@@ -8,7 +10,7 @@ import view.TUI;
 
 public class DSPG {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {		
 		DSP dsp = new DSP();
 		Generator i = new Generator();
 		i.generateDanceGroups(dsp, new Reader("assets/danceShowData_danceGroups.csv"));

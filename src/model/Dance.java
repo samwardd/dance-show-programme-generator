@@ -1,10 +1,11 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
 
-public class Dance {
+public class Dance implements Comparable<Dance> {
 	
 	private String danceName;
 	private List<DanceGroup> danceGroups;
@@ -60,5 +61,49 @@ public class Dance {
 	
 	public List<DanceGroup> getDanceGroups() {
 		return this.danceGroups;
+	}
+	
+	public int compareTo(Dance dance) {
+		return this.getName().compareTo(dance.getName());
+	}
+	
+	private ArrayList<Performer> comparePerformers(Dance comparingTo){
+		ArrayList<Performer> performersInBoth = new ArrayList<Performer>();
+		
+		for(Performer thisPerformer: getAllPerformers()) {
+			for(Performer comparingPerformer: comparingTo.getAllPerformers()) {
+				if(thisPerformer.compareTo(comparingPerformer) == 0) {
+					performersInBoth.add(thisPerformer);
+				}
+			}
+		}
+		return performersInBoth;
+	}
+	
+	public String comparePerformersToString(Dance comparingTo){
+		ArrayList<Performer> performersInBoth = comparePerformers(comparingTo);
+
+		if(performersInBoth.size() > 0) {
+			StringBuilder result = new StringBuilder();
+			
+			result.append("'" + this.getName() + "'");
+			result.append(" and ");
+			result.append("'" + comparingTo.getName() + "': ");
+			
+			Iterator<Performer> performerIterator = performersInBoth.iterator();	
+			
+			while(performerIterator.hasNext()) {
+				result.append(performerIterator.next().getForename());
+				
+				if(performerIterator.hasNext()) {
+					result.append(", "); // Only add to string if not last in iterator
+				}
+			}
+			result.append("." + "\n");
+			
+			return result.toString();			
+		} else {
+			return null;
+		}
 	}
 }

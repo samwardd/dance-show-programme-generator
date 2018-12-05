@@ -6,6 +6,7 @@ import model.DanceGroup;
 import model.Performer;
 import model.PerformerType;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import exceptions.DanceGroupNotFoundException;
@@ -53,6 +54,22 @@ public class Generator {
 			}
 			dsp.addDance(dance);
 		}
+	}
+	
+	public ArrayList<String> readRunningOrder(Reader reader) {
+		ArrayList<String> dancesInRunningOrder = new ArrayList<String>();
+		
+		try {
+			ArrayList<ArrayList<String>> runningOrder = reader.readFile();	
+			
+			for(ArrayList<String> readDance : runningOrder) {
+				dancesInRunningOrder.add(readDance.get(0));
+			}
+		} catch (NullPointerException e) {
+			System.out.println(e.toString());
+		}	
+				
+		return dancesInRunningOrder;		
 	}
 	
 }
