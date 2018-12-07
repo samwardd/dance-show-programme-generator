@@ -6,7 +6,6 @@ import model.DanceGroup;
 import model.Performer;
 import model.PerformerType;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import exceptions.DanceGroupNotFoundException;

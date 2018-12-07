@@ -95,7 +95,7 @@ public class TUIController implements Controller {
 										+ " following performer(s) won't have enough time to change"
 										+ " costume between:" + "\n\n");
 							}
-							feasibility.append(result);
+							feasibility.append("\t" + result);
 						}
 					} 
 				}
@@ -104,11 +104,12 @@ public class TUIController implements Controller {
 		}
 		catch (FileNotFoundException e) {
 			feasibility.append("A file with that name storing the running order could not be found." + "\n\n");
-		} catch (DanceNotFoundException e) {
+		} 
+		catch (DanceNotFoundException e) {
 			feasibility.append("A dance in the running order could not be found." + "\n\n");
 		}			
 			
-		if(feasibility.toString().isEmpty()) {
+		if(feasibility.toString().trim().isEmpty()) {
 			feasibility.append("The given dance order is feasible." + "\n\n");
 		}
 		
@@ -116,8 +117,30 @@ public class TUIController implements Controller {
 	}
 
 	public String generateRunningOrder(int gaps) {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuilder runningOrder = new StringBuilder();	
+		
+		ArrayList<Dance> dances = dsp.generateRunningOrder(gaps);
+		
+		if(dances.size() > 0) {
+			Iterator<Dance> iterator = dances.iterator();
+			int danceNumber = 1;
+			
+			runningOrder.append("A running order has been generated successfully:" + "\n\n");
+			
+			while(iterator.hasNext()) {
+				runningOrder.append("\t" + danceNumber + ". ");
+				runningOrder.append(iterator.next().getName());
+				
+				if(iterator.hasNext()) {
+					runningOrder.append(", "  + "\n");
+					danceNumber++;
+				}
+			}
+			runningOrder.append("." + "\n\n");
+		} else {
+			runningOrder.append("No feasible running order could be generated." + "\n\n");
+		}
+		
+		return runningOrder.toString();
 	}
-
 }

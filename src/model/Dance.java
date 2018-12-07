@@ -67,9 +67,9 @@ public class Dance implements Comparable<Dance> {
 		return this.getName().compareTo(dance.getName());
 	}
 	
-	private ArrayList<Performer> comparePerformers(Dance comparingTo){
+	public ArrayList<Performer> comparePerformers(Dance comparingTo){
 		ArrayList<Performer> performersInBoth = new ArrayList<Performer>();
-		
+
 		for(Performer thisPerformer: getAllPerformers()) {
 			for(Performer comparingPerformer: comparingTo.getAllPerformers()) {
 				if(thisPerformer.compareTo(comparingPerformer) == 0) {
@@ -77,6 +77,7 @@ public class Dance implements Comparable<Dance> {
 				}
 			}
 		}
+		
 		return performersInBoth;
 	}
 	
