@@ -7,19 +7,39 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * A Reader object is used to read the data from a given CSV file.
+ * 
+ * @author Sam Ward
+ * @author Jordan Unitt
+ */
+
 public class Reader {
 	private File file;
 	private BufferedReader bReader;
 	
+	/**
+	 * Creation of a Reader object to read a new file.
+	 * 
+	 * @param filename The file to read.
+	 * @throws FileNotFoundException If file cannot be found.
+	 */
 	public Reader(String filename) throws FileNotFoundException {
 		file = new File(filename);
 		bReader = new BufferedReader(new FileReader(file));
 	}
 	
+	/** 
+	 * Reads a file into a list of a list of strings
+	 *
+	 * @return a list of lines
+	 */
 	public ArrayList<ArrayList<String>> readFile(){
+		// Data structure to store read data into.
 		ArrayList<ArrayList<String>> listOfLines = new ArrayList<ArrayList<String>>();
 		String line = null;
 		
+		// Try to read the file.
 		try {
 			bReader.readLine(); // Discard first line, only column headings and not stored anywhere
 			
@@ -43,6 +63,7 @@ public class Reader {
 			bReader.close();
 			return listOfLines;
 		} catch (IOException e) {
+			// Catch any input errors which occur, and return null to show unsuccessful.
 			System.out.println(e.toString());
 			return null;
 		}		
