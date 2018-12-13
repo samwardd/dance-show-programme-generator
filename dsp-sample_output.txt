@@ -1,0 +1,192 @@
+Functional Requirement 1:
+
+Dance Show Programme Generator
+
+Enter the number associated with your chosen menu option.
+1: List all dancers in a dance
+2: List all dance numbers and the respective dancers
+3: Check the feasibility of a given running order
+4: Generate a running order
+5: Exit this application
+
+1
+Lists all dancers in a dance...
+Enter the name of the required dance:
+Doe-Re-Mi
+Doe-Re-Mi: Lily, Betty, Megan, Moria, Felicity, Susan, Lucia, Cathy, April, Laura, Dora, Agnes, Chris.
+
+
+Functional Requirement 2:
+
+Dance Show Programme Generator
+
+Enter the number associated with your chosen menu option.
+1: List all dancers in a dance
+2: List all dance numbers and the respective dancers
+3: Check the feasibility of a given running order
+4: Generate a running order
+5: Exit this application
+
+2
+Lists all dance numbers and the respective dancers...
+Dance: A Spoonful of Sugar
+Performers: Agnes, April, Cathy, Dora, Felicity, Laura, Lily, Lucia.
+
+Dance: Alice in Disney Land
+Performers: Arwen, Darrell, Florence, Gwen, Ivy, Lauretta, Sally, Vivian.
+
+Dance: All That Jazz
+Performers: Anne, Donna, Fiona, Flora, Grace, Gwen, Jane, Kate, Lucy, Mary.
+
+Dance: Any Dream Will Do
+Performers: Agnes, April, Betty, Cathy, Chris, Dora, Felicity, Laura, Lily, Lucia, Megan, Moria, Susan.
+
+Dance: Blue Danube
+Performers: Arwen, Betty, Felicity, Florence, Gwen, Ivy, Lauretta, Lily, Lucy, Megan, Molly, Moria, Sally, Susan, Vivian.
+
+Dance: Bronze Tap
+Performers: Betty, Felicity, Lily, Megan, Moria, Susan.
+
+Dance: Bye Bye Blackbird
+Performers: Anne, Audrey, Donna, Dorothy, Fiona, Flora, Ginger, Grace, Gwen, Jane, Kate, Lucy, Marianne, Mary, Teresa.
+
+Dance: Cell Block Tango
+Performers: Anne, Donna, Fiona, Flora, Grace, Gwen, Jane, Kate, Lucy, Mary.
+
+Dance: Charleston
+Performers: Ada, Alicia, Anne, Christine, Darrell, Donna, Fiona, Flora, Grace, Gwen, Jane, Jenny, Kate, Kathryn, Lucy, Mary, Mavis.
+
+Dance: Chicken Song
+Performers: Agnes, April, Cathy, Dora, Jenny, Laura, Lucia.
+
+Dance: Choo Choo Ch'boogie
+Performers: Arwen, Florence, Gwen, Ivy, Lauretta, Sally, Vivian.
+
+Dance: Do you Hear the People Sing
+Performers: Ada, Alicia, Arwen, Christine, Darrell, Florence, Gwen, Ivy, Jenny, Kathryn, Lauretta, Mavis, Sally, Vivian.
+
+Dance: Doe-Re-Mi
+Performers: Agnes, April, Betty, Cathy, Chris, Dora, Felicity, Laura, Lily, Lucia, Megan, Moria, Susan.
+
+Dance: Gold Tap
+Performers: Ada, Alicia, Christine, Darrell, Jenny, Kathryn, Mavis.
+
+Dance: Good Morning
+Performers: Ada, Alicia, Anne, Audrey, Christine, Darrell, Donna, Dorothy, Fiona, Flora, Ginger, Grace, Gwen, Jane, Jenny, Kate, Kathryn, Lucy, Marianne, Mary, Mavis, Teresa.
+
+Dance: I Could Have Dance All Night
+Performers: Alicia, Christine, Darrell.
+
+Dance: I Dreamed a Dream
+Performers: Mavis.
+
+Dance: I Got Rhythm
+Performers: Abby, Ada, Agnes, Aimee, Alicia, Anne, April, Arwen, Audrey, Betty, Cathy, Christine, Danielle, Darrell, Donna, Dora, Dorothy, Felicity, Fiona, Flora, Florence, Ginger, Grace, Gwen, Ivy, Jane, Jenny, June, Kate, Kathryn, Laura, Lauretta, Lily, Lucia, Lucy, Mae, Marianne, Mary, Mavis, May, Megan, Molly, Moria, Sally, Susan, Teresa, Vivian.
+
+Dance: Jazz Baby
+Performers: Audrey, Dorothy, Ginger, Marianne, Teresa.
+
+Dance: Jewish Wedding Song
+Performers: Audrey, Dorothy, Ginger, Marianne, Teresa.
+
+Dance: Juvenile Tap
+Performers: Agnes, April, Cathy, Dora, Laura, Lucia.
+
+Dance: Let's Pretend
+Performers: Abby, Aimee, Carrie, Danielle, June, Mae, May, Mindy, Molly, Sandy.
+
+Dance: Make 'em Laugh
+Performers: Betty, Felicity, Lily, Megan, Moria, Susan.
+
+Dance: Masquerade
+Performers: Ada, Alicia, Arwen, Christine, Darrell, Florence, Gwen, Ivy, Jenny, Kathryn, Lauretta, Mavis, Sally, Vivian.
+
+Dance: Memory
+Performers: Mavis.
+
+Dance: My Favourite Things
+Performers: Abby, Agnes, Aimee, April, Cathy, Danielle, Dora, Heather, June, Laura, Lucia, Mae, May, Molly.
+
+Dance: Silver Tap
+Performers: Arwen, Florence, Gwen, Ivy, Lauretta, Sally, Vivian.
+
+Dance: Singing in the Rain
+Performers: Betty, Chris, Felicity, Lily, Megan, Moria, Susan.
+
+Dance: Step In Time
+Performers: Arwen, Betty, Felicity, Florence, Gwen, Ivy, Lauretta, Lily, Megan, Moria, Sally, Susan, Vivian.
+
+Dance: Supercalifragilisticexpialidocious
+Performers: Arwen, Betty, Felicity, Florence, Gwen, Ivy, Lauretta, Lily, Megan, Moria, Sally, Susan, Vivian.
+
+Dance: The Candy Man Can
+Performers: Agnes, Alicia, April, Cathy, Dora, Laura, Lucia.
+
+Dance: The Music of the Night
+Performers: Ada, Alicia, Anne, Christine, Darrell, Donna, Fiona, Flora, Grace, Gwen, Jane, Jenny, Kate, Kathryn, Lucy, Mary, Mavis.
+
+Dance: The Tapioca
+Performers: Anne, Donna, Fiona, Flora, Grace, Gwen, Jane, Kate, Lucy, Mary.
+
+Dance: Thoroughly Modern Milly
+Performers: Ada, Alicia, Christine, Darrell, Jenny, Kathryn, Mavis.
+
+Dance: What a Feeling
+Performers: Christine, Jenny.
+
+Dance: Yankee Doodle
+Performers: Audrey, Dorothy, Ginger, Marianne, Teresa.
+
+
+Functional Requirement 3:
+
+Dance Show Programme Generator
+
+Enter the number associated with your chosen menu option.
+1: List all dancers in a dance
+2: List all dance numbers and the respective dancers
+3: Check the feasibility of a given running order
+4: Generate a running order
+5: Exit this application
+
+3
+Checks the feasibility of a given running order...
+Enter the name of the CSV file with the proposed running order:
+assets/danceShowData_runningOrder.csv
+Enter the required number of gaps between dances:
+2
+The given running order is not feasible because the following performer(s) won't have enough time to change costume between:
+
+	'The Candy Man Can' and 'Thoroughly Modern Milly': Alicia.
+	'Thoroughly Modern Milly' and 'What a Feeling': Christine, Jenny.
+	'Doe-Re-Mi' and 'Make 'em Laugh': Lily, Betty, Megan, Moria, Felicity, Susan.
+
+
+Functional Requirement 4 (using the csv: "assets/test/dances_subset.csv"):
+
+Dance Show Programme Generator
+
+Enter the number associated with your chosen menu option.
+1: List all dancers in a dance
+2: List all dance numbers and the respective dancers
+3: Check the feasibility of a given running order
+4: Generate a running order
+5: Exit this application
+
+4
+Generates a running order...
+Enter the required number of gaps between dances:
+2
+A running order has been generated successfully:
+
+	1. Bronze Tap, 
+	2. Cell Block Tango, 
+	3. Chicken Song, 
+	4. I Could Have Dance All Night, 
+	5. Jazz Baby, 
+	6. Doe-Re-Mi, 
+	7. Gold Tap, 
+	8. Silver Tap, 
+	9. Juvenile Tap, 
+	10. Singing in the Rain, 
+	11. The Music of the Night.
