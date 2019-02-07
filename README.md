@@ -6,4 +6,5 @@ Coursework project for CS2310 Data Structures and Algorithms.
 
 # Group members
 Sam Ward
+
 Jordan Unitt
